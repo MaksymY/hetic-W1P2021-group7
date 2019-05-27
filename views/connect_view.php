@@ -8,8 +8,11 @@
 </head>
 <body>
 
-    <h1>Connectez Vous</h1>
+    <?php include_once 'views/includes/header.php'?>
 
+        <h1>Connectez Vous</h1>
+
+    <?php include_once 'views/includes/footer.php'?>
 
 </body>
 </html>
