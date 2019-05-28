@@ -12,10 +12,6 @@
 
         <form method="post" action="inscrire_view.php" >
             <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" placeholder="Enter email">
-            </div>
-            <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" placeholder="Password">
             </div>

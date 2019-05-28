@@ -7,11 +7,11 @@
 <body>
 
         <?php include_once 'views/includes/header.php'?>
-        <div>
-            <div class="col-lg-10 col-lg-offset-1">
-                <h1>Hello World !</h1>
+            <div class="row aligne-items-center">
+                <div class="col">
+                    <h1>Hello World !</h1>
+                </div>
             </div>
-        </div>
 
         <?php include_once 'views/includes/footer.php'?>
  
