@@ -6,14 +6,14 @@
 </head>
 <body>
 
-   <div class="container home">
-
         <?php include_once 'views/includes/header.php'?>
-
-            <h1>Hello World !</h1>
+        <div>
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Hello World !</h1>
+            </div>
+        </div>
 
         <?php include_once 'views/includes/footer.php'?>
-        
-    </div>
+ 
 </body>
 </html>
