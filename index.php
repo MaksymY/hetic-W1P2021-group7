@@ -1,5 +1,9 @@
 <?php
 
+include_once 'config/db.php';
+ Database::connect(); 
+// Database::$pdo
+
 //Définition de la page courante 
 if (isset($_GET['page']) AND !empty($_GET['page'])) {
     $page = trim(strtolower($_GET['page']));
