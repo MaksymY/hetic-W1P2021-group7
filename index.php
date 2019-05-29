@@ -1,8 +1,15 @@
 <?php
+session_start();
+$_SESSION['user'] = array(
 
-include_once 'config/db.php';
- Database::connect(); 
-// Database::$pdo
+    "id" => 364,
+    "name" => "Peter"
+);
+$bdd= new PDO("mysql:host=localhost;dbname=Penpal;charset=utf8", "root", "");
+
+// include_once 'config/db.php';
+//  Database::connect(); 
+// // Database::$pdo
 
 //Définition de la page courante 
 if (isset($_GET['page']) AND !empty($_GET['page'])) {
