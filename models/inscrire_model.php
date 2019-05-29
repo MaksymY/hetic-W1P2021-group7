@@ -1,4 +1,6 @@
 <?php
+
+
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])
     && !empty($_POST['password_confirm'])){
 
@@ -14,7 +16,7 @@
         }else{
             $req = Database::$pdo->prepare('INSERT INTO user(name, mail, password)VALUES(?,?,?)');
             $res = $req->execute(array($pseudo,$email,$password));
-            var_dump($res);
         }
     }
+
 ?>

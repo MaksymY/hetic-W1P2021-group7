@@ -29,7 +29,7 @@
                         <label for="password">Confirm Password</label>
                         <input type="password" name="password_confirm" class="form-control" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-danger">Submit</button>
                 </form>
             </div>
         </div>
