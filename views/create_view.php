@@ -10,7 +10,7 @@
   <div class="text-center">
     <div class="form-inscrire">
         <h1 class="h3 mb-3 font-weight-normal">Création de l'annonce</h1> 
-        <form method="post" action="?page=home" >
+        <form method="post" action="?page=create" enctype="multipart/from-data">
             <div class="form-group">
                 <label for="name">Pseudo</label>
                 <input type="name" name="pseudo" class="form-control" placeholder="Damien">

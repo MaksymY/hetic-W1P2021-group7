@@ -10,14 +10,16 @@ class CreateController{
         
         $cityError = $descriptionError = $imageError = $city = $description = $image = "";
 
+
         if(!empty($_POST)){
             $city        = $_POST['city'];
             $description = $_POST['city'];
             $image       = $_FILES['image']['name'];
             $imagePath   = './assets/images/' . basename($image);
-            $imageExtension = exif_imagetype($imagePath, PATHINFO_EXTENSION);
+            $imageExtension = pathinfo($imagePath, PATHINFO_EXTENSION);
             $isSuccess      = true;
             $isUploadSuccess = false;
+            
 
             if(empty($city)){
                 $cityError = 'Ce champ est obligatoir';
