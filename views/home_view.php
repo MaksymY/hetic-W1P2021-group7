@@ -12,19 +12,19 @@
 
         <div class="row text-center">
             <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/images/proposer.jpg"  role="img">
+                <h2>Etape 1</h2>
+                <p>Postez votre annonce</p>
             </div>
         <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/images/discuter.png"  role="img">
+                <h2>Étape 2</h2>
+                <p>Envoyez/Recevez des proposition</p>
         </div>
         <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/images/Voyagez.jpg"  role="img">
+                <h2>Étape 3</h2>
+                <p>Voyagez !</p>
         </div>
     </div>
 
@@ -48,6 +48,7 @@
                 echo'<div class="mb-1 text-muted">' . $categorie['date']  . '</div>';
                 echo'<p class="card-text mb-auto">' . $categorie['description'] . '</a>';
                 echo'</div>';
+                echo'button';
                 echo'<div class="col-auto d-none d-lg-block">';
                 echo'<img class="bd-placeholder-img" width="250" height="250" src="assets/images/Tokyo.jpg">';
                 echo'</div>';
