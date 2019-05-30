@@ -48,7 +48,7 @@
                 echo'<div class="mb-1 text-muted">' . $categorie['date']  . '</div>';
                 echo'<p class="card-text mb-auto">' . $categorie['description'] . '</a>';
                 echo'</div>';
-                echo'button';
+                echo'<button><a href="index.php?page=chatbox">Chattez</a></button>';
                 echo'<div class="col-auto d-none d-lg-block">';
                 echo'<img class="bd-placeholder-img" width="250" height="250" src="assets/images/Tokyo.jpg">';
                 echo'</div>';

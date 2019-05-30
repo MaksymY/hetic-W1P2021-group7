@@ -18,7 +18,10 @@ class ChatboxModel{
         }
     }
     public function pull($name, $message){
-        $msgs = $req->query("SELECT * FROM messages ORDER BY id DESC");
+        
+ 
+
+
     }
 }
 

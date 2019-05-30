@@ -4,7 +4,6 @@ namespace Controller;
 
 use Model\ChatboxModel;
 
-namespace Controller;
 
 class ChatboxController{
   public function page(){
@@ -17,8 +16,12 @@ class ChatboxController{
 
         $add = new ChatboxModel;
         $send=$add->send($name, $message);
+
+        $request = new ChatboxModel;
+        $pull = $request->pull($name, $message);
         
     }
     include_once 'views/chatbox_view.php';
+    include_once 'views/chatbox_messages_views.php';
   }
 }
