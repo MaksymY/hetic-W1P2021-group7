@@ -1,7 +1,7 @@
 <?php
 namespace Model;
 
-class Categories{
+class CreateModel{
     public function creat($city, $description, $image, $isSuccess, $isUploadSuccess){
         if($isSuccess && $isUploadSuccess){
         $creating = Database::$pdo->prepare('INSERT INTO categories (city,description,image) value(?,?,?)');

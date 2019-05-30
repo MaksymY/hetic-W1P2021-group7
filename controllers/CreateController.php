@@ -15,7 +15,7 @@ class CreateController{
             $description = $_POST['city'];
             $image       = $_FILES['image']['name'];
             $imagePath   = './assets/images/' . basename($image);
-            $imageExtension = pathinfo($imagePath, PATHINFO_EXTENSION);
+            $imageExtension = exif_imagetype($imagePath, PATHINFO_EXTENSION);
             $isSuccess      = true;
             $isUploadSuccess = false;
 
