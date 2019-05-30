@@ -1,6 +1,11 @@
 <?php
 
+namespace Controller;
 
+use Model\Inscrire;
+
+class InscrireController{
+  public function page(){
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password'])
     && !empty($_POST['password_confirm'])){
 
@@ -10,13 +15,11 @@
         $password     = $_POST['password'];
         $pass_confirm = $_POST['password_confirm'];
 
-        // TEST SI PASSWORD = PASSWORD_CONFIRM
-        if($password != $pass_confirm){
-            echo("le de passe n'est pas identique");
-        }else{
-            $req = Database::$pdo->prepare('INSERT INTO user(name, mail, password)VALUES(?,?,?)');
-            $res = $req->execute(array($pseudo,$email,$password));
-        }
+        $add = new Inscrire;
+        $send=$add->send($pseudo, $email, $password, $pass_confirm);
+        
     }
+    include_once 'views/inscrire_view.php';
+  }
+}
 
-?>

@@ -8,7 +8,7 @@
 
     <?php include_once 'views/includes/header.php'?>
     <div class="text-center"> 
-        <form class="form-signin">
+        <form class="form-connect">
             <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
             <label for="Email" class="sr-only">Adresse mail</label>
             <input type="email" class="form-control" placeholder="Email address" required autofocus>
@@ -19,7 +19,7 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="btn btn-lg btn-danger btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-danger" type="submit">Connexion</button>
         </form>
         <p><a href="index.php?page=inscrire">s'inscrire</a></p>
     </div>
