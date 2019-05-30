@@ -8,7 +8,7 @@ $_SESSION['user'] = array(
 $bdd= new PDO("mysql:host=localhost;dbname=Penpal;charset=utf8", "root", "");
 
 // include_once 'config/db.php';
-//  Database::connect(); 
+// Database::connect(); 
 // // Database::$pdo
 
 //Définition de la page courante 

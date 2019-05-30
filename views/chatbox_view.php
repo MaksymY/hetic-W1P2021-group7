@@ -6,25 +6,26 @@
 </head>
 <body>
     <?php include_once './includes/header.php'?>
+
     <h1>Chattez</h1>
     <main class="chatBox">
         <div class="msgs">
-
         </div>
         <div class="form">
             <form method ="POST" action="">
-                <input type="text" name="messages" placeholder="message">
+                <input type="text" name="message" placeholder="message">
                 <button type="submit" name="send">Envoyer</button>
             </form>
         </div>
     </main>
     <?php include_once './includes/footer.php'?>
+    
 </body>
 <script>
 
         setInterval("messages()", 1500);
         function messages() {
-            $(".msgs").load("chatbox_messages_views.php")
+            $(".msgs").load("./chatbox_messages_views.php")
         }
 
 </script>
