@@ -32,28 +32,30 @@
         <div class="container">
         <h1 class="jumbotron-heading">Crée une annonce</h1>
         <p class="lead text-muted">Crée votre annonce d'echange de logement.</p>
-            <a href="#" class="btn btn-danger my-2">Crée mon annonce</a>
+            <a href="index.php?page=create" class="btn btn-danger my-2">Crée mon annonce</a>
         </div>
     </section>
 
-    <div class="row">
-    <div class="col-md-12">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-muted">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="bd-placeholder-img" width="250" height="250" src="assets/images/Tokyo.jpg">
-        </div>
-      </div>
-    </div>
+    <?php 
+        foreach($list AS $categorie)
+        {
+            echo'<div class="row">';
+            echo'<div class="col-md-12">';
+            echo'<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">';
+                echo'<div class="col p-4 d-flex flex-column position-static">';
+                echo'<strong class="d-inline-block mb-2 text-primary">' . $categorie['city'] . '</strong>';
+                echo'<h3 class="mb-0">' . $categorie['name'] . '</h3>';
+                echo'<div class="mb-1 text-muted">' . $categorie['date']  . '</div>';
+                echo'<p class="card-text mb-auto">' . $categorie['description'] . '</a>';
+                echo'</div>';
+                echo'<div class="col-auto d-none d-lg-block">';
+                echo'<img class="bd-placeholder-img" width="250" height="250" src="assets/images/Tokyo.jpg">';
+                echo'</div>';
+            echo'</div>';
+            echo'</div>';
 
-
-
+        }
+    ?>
     <?php include_once 'views/includes/footer.php'?>
  
 </body>

@@ -1,7 +1,8 @@
 <?php
 
-include_once 'config/db.php';
- Database::connect(); 
+require_once __DIR__ . '/vendor/autoload.php';
+
+ Model\Database::connect(); 
 // Database::$pdo
 
 //Définition de la page courante 
@@ -12,9 +13,15 @@ if (isset($_GET['page']) AND !empty($_GET['page'])) {
 }
 
 // Array contenant tout les pages
-$allPages = scandir('controllers/');
 
-if (in_array($page.'_controller.php', $allPages)){
+$class = 'Controller\\' . ucfirst($page) . 'Controller';
+
+$controller = new $class();
+$controller->page();
+
+/* $allPages = scandir('controllers/'); */
+
+/* if (in_array($page.'_controller.php', $allPages)){
     
     //inclusion de la page 
     include_once 'models/'.$page.'_model.php';
@@ -25,4 +32,4 @@ if (in_array($page.'_controller.php', $allPages)){
     
     echo'Erreur 404';
 
-} 
+}  */

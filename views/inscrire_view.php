@@ -8,10 +8,9 @@
 
     <?php include_once 'views/includes/header.php'?>
 
-        <h1>S'inscrire !</h1>
-        <p>Bienvenue sur Penpal</p>
-        <div class="container justify-content-end">
-            <div class="col-10 col-offset-1"> 
+        <div class="text-center">
+            <div class="form-inscrire">
+                <h1 class="h3 mb-3 font-weight-normal">Inscrivez vous!</h1> 
                 <form method="post" action="?page=inscrire" >
                     <div class="form-group">
                         <label for="name">Pseudo</label>
@@ -31,12 +30,13 @@
                     </div>
                     <button type="submit" class="btn btn-danger">Submit</button>
                 </form>
+                <p><a href="index.php?page=connect">Déjà inscrit</a></p>
             </div>
         </div>
 
         <br>
 
-        <p><a href="index.php?page=connect">Déjà inscrit</a></p>
+        
 
     <?php include_once 'views/includes/footer.php'?>
 

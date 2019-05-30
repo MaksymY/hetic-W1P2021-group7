@@ -1,5 +1,7 @@
 <?php
 
+namespace Model;
+
 class Database{
 
   private const HOST = "localhost";
@@ -10,12 +12,15 @@ class Database{
     
     public static function connect(){
         try{
-            self::$pdo = new PDO(
+            self::$pdo = new \PDO(
                 "mysql:host=" . self::HOST . ";dbname=" . self::NAME,
                 self::USER,
-                self::PASS
+                self::PASS,
+                [
+                    \PDO::ATTR_ERRMODE=>\PDO::ERRMODE_WARNING,
+                ]
             );
-        } catch(PDOExeption $e){
+        } catch(\PDOExeption $e){
             die($e->getMessage());
         }
     }
