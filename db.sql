@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 28, 2019 at 01:37 PM
+-- Generation Time: May 30, 2019 at 12:18 PM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -29,6 +29,13 @@ CREATE TABLE `categories` (
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name_id`, `city`, `description`, `image`, `date`) VALUES
+(1, 1, 'Tokyo', 'This is a wider card with supporting text below as a natural lead-in to additional content.', 'Tokyo.jpg', '2019-05-29');
+
 -- --------------------------------------------------------
 
 --
@@ -41,6 +48,14 @@ CREATE TABLE `user` (
   `mail` varchar(255) NOT NULL,
   `password` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `mail`, `password`) VALUES
+(1, 'maksym', 'maksym.yankivskyypro@gmail.com', 123),
+(5, 'hugues', 'hugues@gmail.com', 1234);
 
 --
 -- Indexes for dumped tables
@@ -67,13 +82,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
