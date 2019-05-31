@@ -1,5 +1,7 @@
 <?php
+
 namespace Model;
+
 class CreateModel{
     public function creat($city, $description, $image, $isSuccess, $isUploadSuccess){
         if($isSuccess && $isUploadSuccess){

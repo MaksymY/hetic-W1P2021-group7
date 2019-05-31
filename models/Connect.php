@@ -5,6 +5,7 @@ namespace Model;
 class Connect{
     public function login($mail, $password){
         if($mail){
+            $password = "aq1".sha1($password."1254")."25";
         $req = Database::$pdo->prepare('SELECT * FROM user WHERE mail=?');
         $req->execute(array($mail));
 

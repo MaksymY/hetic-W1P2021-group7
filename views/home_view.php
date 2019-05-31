@@ -13,7 +13,7 @@
         <div class="row text-center">
             <div class="col-lg-4">
                 <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/images/proposer.jpg"  role="img">
-                <h2>Etape 1</h2>
+                <h2>Étape 1</h2>
                 <p>Postez votre annonce</p>
             </div>
         <div class="col-lg-4">

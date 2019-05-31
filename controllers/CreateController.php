@@ -10,7 +10,7 @@ class CreateController{
             $city        = $_POST['city'];
             $description = $_POST['description'];
             $image       = $_FILES['image']['name'];
-            $imagePath   = './assets/images/' . basename($image);
+            $imagePath   = '../assets/images/' . basename($image);
             $imageExtension = pathinfo($imagePath, PATHINFO_EXTENSION);
             $isSuccess      = true;
             $isUploadSuccess = false;
