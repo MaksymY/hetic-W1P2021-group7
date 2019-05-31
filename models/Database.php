@@ -7,7 +7,7 @@ class Database{
   private const HOST = "localhost";
   private const NAME = "Penpal";
   private const USER = "root";
-  private const PASS = "root";
+  private const PASS = "";
   public static $pdo;
     
     public static function connect(){

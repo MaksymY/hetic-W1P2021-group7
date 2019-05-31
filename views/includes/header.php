@@ -8,8 +8,15 @@
         <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Rechercher</button>
     </form>
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="index.php?page=connect">Connect</a>
+        <?php 
+        if (!isset($_SESSION['connect'])) { ?>
+            <a class="p-2 text-dark" href="index.php?page=connect">Connexion</a>
             <a class="p-2 text-dark" href="index.php?page=inscrire">S'inscrire</a>
+            
+        <?php } else { ?>
+    <a class="p-2 text-dark" href="">Bonjour<?php echo " " . $_SESSION['name'];?></a>
+            <a class="p-2 text-dark" href="index.php?page=logout">Deconnexion</a>
+        <?php }; ?>
         </nav>
         </div>
 

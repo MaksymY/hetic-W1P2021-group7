@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include_once 'views/includes/head.php'?>
-    <title><?php ucfirst($page) ?>Penpal</title>
+    <title>Home - Penpal</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <div class="row text-center">
             <div class="col-lg-4">
                 <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/images/proposer.jpg"  role="img">
-                <h2>Etape 1</h2>
+                <h2>Étape 1</h2>
                 <p>Postez votre annonce</p>
             </div>
         <div class="col-lg-4">
@@ -30,9 +30,9 @@
 
     <section class="jumbotron text-center">
         <div class="container">
-        <h1 class="jumbotron-heading">Crée une annonce</h1>
-        <p class="lead text-muted">Crée votre annonce d'echange de logement.</p>
-            <a href="index.php?page=create" class="btn btn-danger my-2">Crée mon annonce</a>
+        <h1 class="jumbotron-heading">Créez une annonce</h1>
+        <p class="lead text-muted">Créez votre annonce d'échange de logement.</p>
+            <a href="index.php?page=create" class="btn btn-danger my-2">Créez mon annonce</a>
         </div>
     </section>
 
@@ -48,7 +48,7 @@
                 echo'<div class="mb-1 text-muted">' . $categorie['date']  . '</div>';
                 echo'<p class="card-text mb-auto">' . $categorie['description'] . '</a>';
                 echo'</div>';
-                echo'button';
+                echo'<button ><a class="btn btn-danger" href="index.php?page=chatbox">Chattez</a></button>';
                 echo'<div class="col-auto d-none d-lg-block">';
                 echo'<img class="bd-placeholder-img" width="250" height="250" src="assets/images/Tokyo.jpg">';
                 echo'</div>';

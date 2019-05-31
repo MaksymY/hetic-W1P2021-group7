@@ -11,6 +11,10 @@
         <div class="text-center">
             <div class="form-inscrire">
                 <h1 class="h3 mb-3 font-weight-normal">Inscrivez vous!</h1> 
+                <?php
+                if (!isset($_SESSION['connect'])) { ?>
+
+                
                 <form method="post" action="?page=inscrire" >
                     <div class="form-group">
                         <label for="name">Pseudo</label>
@@ -29,8 +33,11 @@
                         <input type="password" name="password_confirm" class="form-control" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-danger">Submit</button>
+                    <p><a href="index.php?page=connect">Déjà inscrit</a></p>
                 </form>
-                <p><a href="index.php?page=connect">Déjà inscrit</a></p>
+                <?php } else { ?>
+                <p>Bonjour <?= $_SESSION['name']; ?></p>
+                <?php } ?>
             </div>
         </div>
 

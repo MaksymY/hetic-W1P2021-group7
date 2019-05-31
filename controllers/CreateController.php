@@ -1,32 +1,27 @@
 <?php 
-
 namespace Controller;
-
 use Model\CreateModel;
-
 class CreateController{
-
     public function page(){
         
         $cityError = $descriptionError = $imageError = $city = $description = $image = "";
-
-
-        if(!empty($_POST)){
+        if(!empty($_POST) && !isset($_POST['image'])){
+            print_r("$user");
             $city        = $_POST['city'];
-            $description = $_POST['city'];
+            $description = $_POST['description'];
             $image       = $_FILES['image']['name'];
-            $imagePath   = './assets/images/' . basename($image);
+            $imagePath   = '../assets/images/' . basename($image);
             $imageExtension = pathinfo($imagePath, PATHINFO_EXTENSION);
             $isSuccess      = true;
             $isUploadSuccess = false;
             
-
             if(empty($city)){
-                $cityError = 'Ce champ est obligatoir';
+                
+                $cityError = 'Ce champ est obligatoire';
                 $isSuccess = false;
             }
             if(empty($description)){
-                $descriptionError = 'Ce champ est obligatoir';
+                $descriptionError = 'Ce champ est obligatoire';
                 $isSuccess = false;
             }
             if(empty($image)){
