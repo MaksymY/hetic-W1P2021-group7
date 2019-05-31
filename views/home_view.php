@@ -35,6 +35,13 @@
             <a href="index.php?page=create" class="btn btn-danger my-2">Créez mon annonce</a>
         </div>
     </section>
+    <section class="jumbotron text-center">
+        <div class="container">
+        <h1 class="jumbotron-heading">Venez discutez avec nos membres</h1>
+        <p class="lead text-muted">Discutez et partager vos lieux préférés</p>
+            <a href="index.php?page=chatbox" class="btn btn-danger my-2">Discutez</a>
+        </div>
+    </section>
 
     <?php 
         foreach($list AS $categorie)
@@ -48,7 +55,6 @@
                 echo'<div class="mb-1 text-muted">' . $categorie['date']  . '</div>';
                 echo'<p class="card-text mb-auto">' . $categorie['description'] . '</a>';
                 echo'</div>';
-                echo'<button ><a class="btn btn-danger" href="index.php?page=chatbox">Chattez</a></button>';
                 echo'<div class="col-auto d-none d-lg-block">';
                 echo'<img class="bd-placeholder-img" width="250" height="250" src="assets/images/Tokyo.jpg">';
                 echo'</div>';
