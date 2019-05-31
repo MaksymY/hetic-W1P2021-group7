@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include_once 'views/includes/head.php'?>
-    <title><?php ucfirst($page) ?>Penpal</title>
+    <title>Création - Penpal</title>
 </head>
 <body>
   <?php include_once 'views/includes/header.php'?>

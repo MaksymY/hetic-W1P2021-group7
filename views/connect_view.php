@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <?php include_once 'views/includes/head.php'?>
-    <title><?php ucfirst($page) ?>Penpal</title>
+    <title>Connexion - Penpal</title>
 </head>
 <body>
 

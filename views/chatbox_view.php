@@ -8,7 +8,7 @@ namespace Model;
     <?php 
     
     include_once 'views/includes/head.php'?>
-    <title><?php ucfirst($page)?>Penpal</title>
+    <title>Chatboc</title>
 </head>
 <body>
     <?php include_once 'views/includes/header.php'?>
