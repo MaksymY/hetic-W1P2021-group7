@@ -5,16 +5,21 @@ namespace Controller;
 use Model\Connect;
 class ConnectController{
     public function page(){
-        if(!empty($_POST['email']) && !empty($_POST['password'])){
+
+        if(!empty($_POST['mail']) && !empty($_POST['password'])){
     
-            $email = $_POST['email'];
+            $mail = $_POST['mail'];
             $password = $_POST['password'];
 
+            // $password = "aq1" .sha1($password."1254")."25";
 
-        }
+
+        
         $request = new Connect;
-        $pull = $request->pull($email, $password);
+        $login = $request->login($mail, $password);
+        }
 
+        
         include_once 'views/connect_view.php';
     } 
 }

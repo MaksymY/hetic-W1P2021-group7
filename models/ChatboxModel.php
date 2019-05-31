@@ -16,15 +16,9 @@ class ChatboxModel{
                 $error = "Vous devez entrer un message !";
             }
         }
-    }
-    public function pull($name, $message){
-        
- 
-
-
-    }
+    }  
 }
 
 // // Recovery all message
 // $msgs = $req->query("SELECT * FROM messages ORDER BY id DESC");
-?>
+

@@ -30,9 +30,9 @@
 
     <section class="jumbotron text-center">
         <div class="container">
-        <h1 class="jumbotron-heading">Crée une annonce</h1>
-        <p class="lead text-muted">Crée votre annonce d'echange de logement.</p>
-            <a href="index.php?page=create" class="btn btn-danger my-2">Crée mon annonce</a>
+        <h1 class="jumbotron-heading">Créez une annonce</h1>
+        <p class="lead text-muted">Créez votre annonce d'échange de logement.</p>
+            <a href="index.php?page=create" class="btn btn-danger my-2">Créez mon annonce</a>
         </div>
     </section>
 

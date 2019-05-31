@@ -1,28 +1,22 @@
 <?php 
-
 namespace Controller;
-
 use Model\CreateModel;
-
 class CreateController{
-
     public function page(){
         
         $cityError = $descriptionError = $imageError = $city = $description = $image = "";
-
-
-        if(!empty($_POST['city']) && !empty($_POST['description']) && !empty($_FILES['image']['name_id'])){
-            
+        if(!empty($_POST) && !isset($_POST['image'])){
+            print_r("$user");
             $city        = $_POST['city'];
             $description = $_POST['description'];
-            $image       = $_FILES['image']['name_id'];
+            $image       = $_FILES['image']['name'];
             $imagePath   = './assets/images/' . basename($image);
             $imageExtension = pathinfo($imagePath, PATHINFO_EXTENSION);
             $isSuccess      = true;
             $isUploadSuccess = false;
             
-
             if(empty($city)){
+                
                 $cityError = 'Ce champ est obligatoire';
                 $isSuccess = false;
             }
@@ -31,7 +25,7 @@ class CreateController{
                 $isSuccess = false;
             }
             if(empty($image)){
-                $imageError = 'Ce champ est obligatoire';
+                $imageError = 'Ce champ est obligatoir';
                 $isSuccess = false;
             }else{
                 $isUploadSuccess = true;
@@ -55,7 +49,7 @@ class CreateController{
                 }
             }
             $verifie = new CreateModel;
-            $creat = $verifie -> send($city, $description, $image, $isSuccess, $isUploadSuccess);
+            $creat = $verifie -> creat($city, $description, $image, $isSuccess, $isUploadSuccess);
         }
         include_once 'views/create_view.php';
     }

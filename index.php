@@ -1,9 +1,10 @@
 <?php
-session_start();
-$_SESSION['user'] =array(
-    "id" => 345,
-    "name" => "Peter"
-);
+        session_start();
+
+// $_SESSION['user'] =array(
+//     "id" => 345,
+//     "name" => "Peter"
+// );
 require_once __DIR__ . '/vendor/autoload.php';
 
 Model\Database::connect(); 

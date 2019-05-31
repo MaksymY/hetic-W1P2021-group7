@@ -1,5 +1,7 @@
 <?php 
-namespace Model;?>
+namespace Model;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,21 +13,21 @@ namespace Model;?>
 <body>
     <?php include_once 'views/includes/header.php'?>
 
-    <h1>Chattez</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Chattez</h1>
     <main class="chatBox">
-        <div class="msgs">
+        <div id= "msgs" class="msgs">
         <?php 
-        
         $query = Database::$pdo->query("SELECT * FROM messages ORDER BY id DESC");
         while ($msg= $query->fetch()) {?>
-            <b><?= $msg['name'] ?></b> : <span class = "message"><?= $msg['message'] ?> <br>
+        
+            <b class="nameChat"><?= $msg['name'] ?></b> : <span class = "message"><?= $msg['message'] ?> <br>
+            
         <?php } ?>
-
         </div>
-        <div class="form">
-            <form method ="POST" action="">
-                <input type="text" name="message" placeholder="message">
-                <button type="submit" name="send">Envoyer</button>
+        <div >
+            <form  class="form-group" method ="POST" action="">
+                <input class="form-control" type="text" name="message" placeholder="message">
+                <button class="btn btn-lg btn-danger" type="submit" name="send">Envoyer</button>
             </form>
         </div>
     </main>
@@ -34,10 +36,25 @@ namespace Model;?>
 </body>
 <script>
 
-        setInterval("messages()", 1500);
+        setInterval("messages()", 4000);
         function messages() {
-            $(".msgs").load("./chatbox_messages_views.php");
+            $(".msgs").load("#msgs");
         }
 
 </script>
 </html>
+
+<style>
+main {
+    max-height: 90vh;
+}
+.msgs {
+    max-height: 70vh;
+    overflow: scroll;
+    color: black;
+}
+
+.nameChat {
+    color: red;
+}
+</style>

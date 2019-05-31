@@ -11,17 +11,15 @@ class ChatboxController{
 
         //VARIABLES
 
-        $name       = $_SESSION['user']['name'];
+        $name       = $_SESSION['name'];
         $message    = htmlspecialchars($_POST['message']);
 
         $add = new ChatboxModel;
         $send=$add->send($name, $message);
 
-        $request = new ChatboxModel;
-        $pull = $request->pull($name, $message);
-        
+        // $request = new ChatboxModel;
+        // $pull = $request->pull($name, $message);
     }
     include_once 'views/chatbox_view.php';
-    include_once 'views/chatbox_messages_views.php';
   }
 }
